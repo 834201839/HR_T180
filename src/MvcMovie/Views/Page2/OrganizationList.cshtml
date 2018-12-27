@@ -1,0 +1,160 @@
+﻿
+@{
+    ViewBag.Title = "OrganizationSet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<script src="~/Content/UserJS/jquery.min.js"></script>*@
+<script src="~/Content/UserJS/bootstrap-treeview.min.js"></script>
+
+
+<div class="col-lg-12">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>组织结构设置</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
+                    <i class="fa fa-wrench"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li>
+                        <a href="table_data_tables.html#">Config option 1</a>
+                    </li>
+                    <li>
+                        <a href="table_data_tables.html#">Config option 2</a>
+                    </li>
+                </ul>
+                <a class="close-link">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="ibox-content" style="display: block">
+           
+           
+
+                <div class="row">
+
+  
+                    <div class="col-lg-4 ">
+
+                        <div id="tree">
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-8 ">
+                        <form class="form-horizontal">
+                            <div class="form-group ">
+                        
+                                <label class="col-lg-2 control-label">组织编码:</label>
+                                <div class="col-lg-4">
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                               
+                                <label class="col-lg-2 control-label">组织简称:</label>
+                                <div class="col-lg-4">
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                               
+                                <label class="col-lg-2 control-label">组织全称:</label>
+                                <div class="col-lg-4">
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                             
+                                <label class="col-lg-2 control-label">所属组织:</label>
+                                <div class="col-lg-4">
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">地址:</label>
+
+                                <div class="col-lg-10"><input type="text" placeholder="" class="form-control"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">简介:</label>
+
+                                <div class="col-lg-10"><textarea class="form-control" id="message" rows="5" placeholder="请输入试题内容 ..."></textarea></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">备注:</label>
+
+                                <div class="col-lg-10"><textarea class="form-control" id="message" rows="5" placeholder="请输入备注内容 ..."></textarea></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">是否启用:</label>
+
+                                <div class="col-lg-10"><input type="checkbox" placeholder="" class="left"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-3"><button type="button" class=" btn btn-w-m btn-outline btn-primary">保存</button></div>
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-3"><button type="button" class=" btn btn-w-m btn-outline btn-primary">返回</button></div>
+                                <div class="col-lg-2"></div>
+                            </div>
+                        </form>
+                    </div>
+
+              
+
+        
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    //临时展示数据
+    var tree = [
+        {
+            text: "Parent 1",
+            nodes: [
+                {
+                    text: "Child 1",
+                    nodes: [
+                        {
+                            text: "Grandchild 1"
+                        },
+                        {
+                            text: "Grandchild 2"
+                        }
+                    ]
+                },
+                {
+                    text: "Child 2"
+                }
+            ]
+        },
+        {
+            text: "Parent 2"
+        },
+        {
+            text: "Parent 3"
+        },
+        {
+            text: "Parent 4"
+        },
+        {
+            text: "Parent 5"
+        }
+    ];
+
+    function getTree() {
+        // Some logic to retrieve, or generate tree structure
+        return tree;
+    }
+
+    $('#tree').treeview({data: getTree()});
+
+</script>

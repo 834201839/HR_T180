@@ -1,0 +1,297 @@
+﻿
+@{
+    ViewBag.Title = "LuYongView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link href="~/Content/css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+<script src="~/Content/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<div class="col-lg-12">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>录用明细查看</h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
+                    <i class="fa fa-wrench"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li>
+                        <a href="table_data_tables.html#">Config option 1</a>
+                    </li>
+                    <li>
+                        <a href="table_data_tables.html#">Config option 2</a>
+                    </li>
+                </ul>
+                <a class="close-link">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="ibox-content">
+
+            <div id="editable_wrapper" class="">
+
+
+                <form class="form-horizontal">
+                    <div class="form-group ">
+                        <label class="col-lg-1 control-label">应聘职位信息:</label>
+                        <div class="col-lg-3 control">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">应聘职位编码:</label>
+                        <div class="col-lg-3 control">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">职位分离:</label>
+                        <div class="col-lg-3">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="col-lg-1 control-label">姓名:</label>
+                        <div class="col-lg-3">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">性别:</label>
+                        <div class="col-lg-3">
+                            <select name="editable_length" aria-controls="editable" class="form-control input-sm">
+                                <option value="10">100000000</option>
+                                <option value="25">200000</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                        <label class="col-lg-1 control-label">招聘类型:</label>
+                        <div class="col-lg-3">
+                            <select name="editable_length" aria-controls="editable" class="form-control input-sm">
+                                <option value="10">100000000</option>
+                                <option value="25">200000</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="col-lg-1 control-label">EMAIL:</label>
+                        <div class="col-lg-3 control">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">联系电话:</label>
+                        <div class="col-lg-3 control">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">户口所在地:</label>
+                        <div class="col-lg-3">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="col-lg-1 control-label">住址:</label>
+                        <div class="col-lg-7 control">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">学历:</label>
+                        <div class="col-lg-3 control">
+                            <select name="editable_length" aria-controls="editable" class="form-control input-sm">
+                                <option value="10">100000000</option>
+                                <option value="25">200000</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group ">
+                        <label class="col-lg-1 control-label">身份证号:</label>
+                        <div class="col-lg-3 control">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">毕业院校:</label>
+                        <div class="col-lg-3 control">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">政治面貌:</label>
+                        <div class="col-lg-3">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="col-lg-1 control-label">专业:</label>
+                        <div class="col-lg-3 control">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">工作经验:</label>
+                        <div class="col-lg-3 control">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">薪资要求:</label>
+                        <div class="col-lg-3">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <label class="col-lg-1 control-label">是否在职:</label>
+                        <div class="col-lg-3 control">
+                            <select name="editable_length" aria-controls="editable" class="form-control input-sm">
+                                <option value="10">100000000</option>
+                                <option value="25">200000</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                        <label class="col-lg-1 control-label">是否应届生:</label>
+                        <div class="col-lg-3 control">
+                            <select name="editable_length" aria-controls="editable" class="form-control input-sm">
+                                <option value="10">100000000</option>
+                                <option value="25">200000</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                        <label class="col-lg-1 control-label">登记时间:</label>
+                        <div class="col-lg-3">
+                            <div class="form-group" id="data_1">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-1 control-label">个人履历:</label>
+                        <div class="col-lg-11"><textarea class="form-control" id="message" rows="5" placeholder="请输入内容 ..."></textarea></div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="col-lg-1 control-label">是否在职:</label>
+                        <div class="col-lg-2 control">
+                            <select name="editable_length" aria-controls="editable" class="form-control input-sm">
+                                <option value="10">100000000</option>
+                                <option value="25">200000</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                        <label class="col-lg-1 control-label">是否应届生:</label>
+                        <div class="col-lg-2 control">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">登记时间:</label>
+                        <div class="col-lg-2">
+                            <div class="form-group" id="data_1">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-1 control-label">推荐面试意见:</label>
+
+                        <div class="col-lg-11"><textarea class="form-control" id="message" rows="3" placeholder="请输入内容 ..."></textarea></div>
+                    </div>
+                    <div class="form-group">
+                        <p class="p-lg">
+                            ------ <span class="h3">面试结果</span>
+                            ----------------------------------------------------------------------------------------
+                            ----------------------------------------------------------------------------------------
+                            -----------------------------------------------------------------------
+                        </p>
+                    </div>
+
+                    <div class="form-group ">
+                        <label class="col-lg-1 control-label">一面面试人:</label>
+                        <div class="col-lg-2 control">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">面试时间:</label>
+                        <div class="col-lg-2">
+                            <div class="form-group" id="data_1">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                </div>
+                            </div>
+                        </div>
+                        <label class="col-lg-1 control-label">二面面试人:</label>
+                        <div class="col-lg-2 control">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">面试时间:</label>
+                        <div class="col-lg-2">
+                            <div class="form-group" id="data_1">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-1 control-label">一面面试评价:</label>
+                        <div class="col-lg-5"><textarea class="form-control" id="message" rows="3" placeholder="请输入内容 ..."></textarea></div>
+                        <label class="col-lg-1 control-label">二面面试评价:</label>
+                        <div class="col-lg-5"><textarea class="form-control" id="message" rows="3" placeholder="请输入内容 ..."></textarea></div>
+
+                    </div>
+
+                    <div class="form-group ">
+                        <label class="col-lg-1 control-label">三面面试人:</label>
+                        <div class="col-lg-2 control">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <label class="col-lg-1 control-label">面试时间:</label>
+                        <div class="col-lg-2">
+                            <div class="form-group" id="data_1">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="col-lg-1 control-label">决议时间:</label>
+                        <div class="col-lg-2">
+                            <div class="form-group" id="data_1">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-1 control-label">三面面试评价:</label>
+                        <div class="col-lg-5"><textarea class="form-control" id="message" rows="3" placeholder="请输入内容 ..."></textarea></div>
+                        <label class="col-lg-1 control-label">录用决议:</label>
+                        <div class="col-lg-5"><textarea class="form-control" id="message" rows="3" placeholder="请输入内容 ..."></textarea></div>
+
+                    </div>
+                <div class="form-group">
+                    <div class="col-lg-5"></div>
+                    <div class="col-lg-7"><button type="button" class=" btn btn-w-m btn-outline btn-primary">返回</button></div>
+                </div>
+                </form>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $('#data_1 .input-group.date').datepicker({
+        todayBtn: "linked",
+        keyboardNavigation: false,
+        forceParse: false,
+        calendarWeeks: true,
+        autoclose: true
+    });
+</script>
+
