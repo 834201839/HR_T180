@@ -1,0 +1,96 @@
+﻿@model MvcMovie.Models.User
+
+@{
+    ViewBag.Title = "EditUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+<div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>修改用户信息</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="form_basic.html#" aria-expanded="false">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="form_basic.html#">Config option 1</a>
+                        </li>
+                        <li>
+                            <a href="form_basic.html#">Config option 2</a>
+                        </li>
+                    </ul>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content" style="display: block;">
+                <form class="form-horizontal">
+                    <div class="form-group ">
+                        <label class="col-lg-2 control-label">用户编码:</label>
+                        <div class="col-lg-10">
+                            @Html.EditorFor(model => model.ID, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.ID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">用户名称:</label>
+                        <div class="col-lg-10">
+                            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">密码:</label>
+                        <div class="col-lg-10">
+                            @Html.EditorFor(model => model.PassWord, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PassWord, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="col-lg-2 control-label">用户角色:</label>
+                        <div class="col-lg-10">
+                           
+                            @Html.DropDownList("RID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.RID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">所属部门:</label>
+                        <div class="col-lg-10">
+                            @Html.DropDownList("DID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.DID, "", new { @class = "text-danger" })
+
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">联系电话:</label>
+                        <div class="col-lg-10">
+                            @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-3"><button type="submit" class=" btn btn-w-m btn-outline btn-primary">修改</button></div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-3"><button type="button" class=" btn btn-w-m btn-outline btn-primary">返回</button></div>
+                        <div class="col-lg-2"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3"></div>
+</div>
+
+}
